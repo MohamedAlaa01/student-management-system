@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "9ac473fa-c3dc-4ebe-913d-ef85d76a5406",
+		"name": "student-management-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6891573"
+	},
+	"item": [
+		{
+			"name": "schedule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTcyODE3ODY3MCwiZXhwIjoxNzI4MTc4OTcwfQ.YW-bZNnE23XG2MjFnCDw4pZtepxY4iJIGqo5EtmTais",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/courses/schedule",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"courses",
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mohamedalaa\",\r\n    \"password\": \"testpassword\",\r\n    \"email\": \"mohamedalaa@gmail.com\",\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"User\",\r\n    \"dateOfBirth\": \"1996-08-01\",\r\n    \"phoneNumber\": \"1234567890\",\r\n    \"address\": \"123 Test Street, Test City, 12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mohamedalaa\",\r\n    \"password\": \"testpassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create course",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwic3ViIjoibWFobW91ZHh5eiIsImlhdCI6MTcyODIxNjgyMCwiZXhwIjoxNzI4MjE3MTIwfQ.G8B0KO3eV4SaS4CYgVNhWtiH5nQLJozKKyxQ1TIzHi8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Introduction to Spring Boot\",\n  \"description\": \"Learn the basics of Spring Boot\",\n  \"startDate\": \"2024-10-25T09:00:00\",\n  \"endDate\": \"2024-12-15T17:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/courses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register student course",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwic3ViIjoibWFobW91ZHh5eiIsImlhdCI6MTcyODIxNjgyMCwiZXhwIjoxNzI4MjE3MTIwfQ.G8B0KO3eV4SaS4CYgVNhWtiH5nQLJozKKyxQ1TIzHi8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/courses/1/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"courses",
+						"1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get courses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiLCJST0xFX0FETUlOIl0sInN1YiI6Im1haG1vdWR4eXoiLCJpYXQiOjE3MjgyMDA2OTMsImV4cCI6MTcyODIwMDk5M30.vCfumoJNLW6iCSOjAGF48jW5j04_gd-Z0PoO2_PSwUU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/courses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "schedule pdf",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwic3ViIjoibWFobW91ZHh5eiIsImlhdCI6MTcyODIxNjgyMCwiZXhwIjoxNzI4MjE3MTIwfQ.G8B0KO3eV4SaS4CYgVNhWtiH5nQLJozKKyxQ1TIzHi8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/courses/schedule",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"courses",
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiLCJST0xFX0FETUlOIl0sInN1YiI6Im1haG1vdWR4eXoiLCJpYXQiOjE3MjgyMDA2OTMsImV4cCI6MTcyODIwMDk5M30.vCfumoJNLW6iCSOjAGF48jW5j04_gd-Z0PoO2_PSwUU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/courses/8/cancel",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"courses",
+						"8",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
